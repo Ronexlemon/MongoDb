@@ -205,5 +205,69 @@ bookstore> db.books.find().limit(2)
   }
 ]
 
+# -> .sort({key:1/-1})
+
+return the objects in either asc or des order based on the key
+
+bookstore> db.books.find().sort({title:-1})
+[
+  {
+    _id: ObjectId('65ced3602a5d7663eb058ae0'),
+    title: 'holy ghost',
+    author: 'manlt john',
+    pages: 760,
+    rating: 5,
+    genres: [ 'fantasy', 'magical' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae2'),
+    title: 'dansel',
+    author: 'kales',
+    pages: 560,
+    rating: 8,
+    genres: [ 'fantasy' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae1'),
+    title: 'The rider',
+    author: ' john',
+    pages: 1760,
+    rating: 9,
+    genres: [ 'magical' ]
+  },
+  {
+    _id: ObjectId('65ced2cd2a5d7663eb058adf'),
+    title: 'The loss ship',
+    author: 'johny done',
+    pages: 700,
+    rating: 6,
+    genres: [ 'fantasy', 'magical' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae4'),
+    title: 'The great finder',
+    author: 'yule',
+    pages: 400,
+    rating: 3,
+    genres: [ 'sci-fi', 'dysopian' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae3'),
+    title: 'The Big Man',
+    author: 'yule',
+    pages: 540,
+    rating: 7,
+    genres: [ 'fantasy', 'magical' ]
+  },
+  {
+    _id: ObjectId('65cecf334586e30177dfe8c2'),
+    title: 'Name of the wind',
+    author: 'lemonr',
+    pages: 500,
+    genres: [ 'fantasy', 'magical' ],
+    rating: 0
+  }
+]
+
 
 
