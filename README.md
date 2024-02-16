@@ -181,4 +181,29 @@ bookstore> db.books.find({author:"yule"}).count()
 2
 
 
+# -> .limit(number)
+
+return only the specified number of object
+
+bookstore> db.books.find().limit(2)
+[
+  {
+    _id: ObjectId('65cecf334586e30177dfe8c2'),
+    title: 'Name of the wind',
+    author: 'lemonr',
+    pages: 500,
+    genres: [ 'fantasy', 'magical' ],
+    rating: 0
+  },
+  {
+    _id: ObjectId('65ced2cd2a5d7663eb058adf'),
+    title: 'The loss ship',
+    author: 'johny done',
+    pages: 700,
+    rating: 6,
+    genres: [ 'fantasy', 'magical' ]
+  }
+]
+
+
 
