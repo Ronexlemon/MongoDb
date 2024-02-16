@@ -269,5 +269,44 @@ bookstore> db.books.find().sort({title:-1})
   }
 ]
 
+## operators
+
+all operators are denotedusing the $ sign
+
+# the gt (greater than) operator
+
+# -> $gt: value
+
+ db.books2.find({rating:{$gt:3}})
+
+ returns allobjects with rating greater than 3
+
+ [
+  {
+    _id: ObjectId('65cedfa92a5d7663eb058ae5'),
+    title: 'the way of king',
+    author: 'Brandon sley',
+    rating: 6,
+    pages: 100,
+    genres: [ 'fantasy', 'magical' ],
+    reviews: [
+      { name: 'yoshi', body: 'great book' },
+      { name: 'mand', body: 'i like the book' }
+    ]
+  },
+  {
+    _id: ObjectId('65cee1132a5d7663eb058ae7'),
+    title: 'the little monkey',
+    author: 'Bran',
+    rating: 7,
+    pages: 100,
+    genres: [ 'fantasy' ],
+    reviews: [
+      { name: 'john', body: 'great book yeah' },
+      { name: 'feng', body: 'the book its giving' }
+    ]
+  }
+]
+
 
 
