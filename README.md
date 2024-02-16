@@ -171,3 +171,14 @@ bookstore> db.books.findOne({_id:ObjectId('65ced49c2a5d7663eb058ae4')})
   genres: [ 'sci-fi', 'dysopian' ]
 }
 
+# -> .count()
+
+returns the number of objects contained in the collection
+
+bookstore> db.books.find().count()
+7
+bookstore> db.books.find({author:"yule"}).count()
+2
+
+
+
