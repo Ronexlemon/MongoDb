@@ -368,6 +368,13 @@ db.books.find({rating:{$in:[2,5,7]}})
   }
 ]
 
+# -> opposite is $nin 
+not in
+
+
+db.books.find({rating:{$nin:[2,5,7]}})
+
+
 
 
 
