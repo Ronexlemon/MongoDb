@@ -318,3 +318,31 @@ greater than or equal
 
 
 
+# -> the $or operator
+
+fetches object if either of the condition match
+
+bookstore> db.books.find({$or:[{rating:6},{rating:9}]})[
+  {
+    _id: ObjectId('65ced2cd2a5d7663eb058adf'),
+    title: 'The loss ship',
+    author: 'johny done',
+    pages: 700,
+    rating: 6,
+    genres: [ 'fantasy', 'magical' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae1'),
+    title: 'The rider',
+    author: ' john',
+    pages: 1760,
+    rating: 9,
+    genres: [ 'magical' ]
+  }
+]
+
+
+
+
+
+
