@@ -342,6 +342,31 @@ bookstore> db.books.find({$or:[{rating:6},{rating:9}]})[
 ]
 
 
+# -> the $in operator
+
+returns all values in the range
+
+db.books.find({rating:{$in:[2,5,7]}})
+
+
+[
+  {
+    _id: ObjectId('65ced3602a5d7663eb058ae0'),
+    title: 'holy ghost',
+    author: 'manlt john',
+    pages: 760,
+    rating: 5,
+    genres: [ 'fantasy', 'magical' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae3'),
+    title: 'The Big Man',
+    author: 'yule',
+    pages: 540,
+    rating: 7,
+    genres: [ 'fantasy', 'magical' ]
+  }
+]
 
 
 
