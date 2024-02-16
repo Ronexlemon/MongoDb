@@ -1,0 +1,140 @@
+## MONGODB COMMANDS
+
+# -> find() 
+returns all the fields inside the collection 
+
+bookstore> db.books.find()
+[
+  {
+    _id: ObjectId('65cecf334586e30177dfe8c2'),
+    title: 'Name of the wind',
+    author: 'lemonr',
+    pages: 500,
+    genres: [ 'fantasy', 'magical' ],
+    rating: 0
+  },
+  {
+    _id: ObjectId('65ced2cd2a5d7663eb058adf'),
+    title: 'The loss ship',
+    author: 'johny done',
+    pages: 700,
+    rating: 6,
+    genres: [ 'fantasy', 'magical' ]
+  },
+  {
+    _id: ObjectId('65ced3602a5d7663eb058ae0'),
+    title: 'holy ghost',
+    author: 'manlt john',
+    pages: 760,
+    rating: 5,
+    genres: [ 'fantasy', 'magical' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae1'),
+    title: 'The rider',
+    author: ' john',
+    pages: 1760,
+    rating: 9,
+    genres: [ 'magical' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae2'),
+    title: 'dansel',
+    author: 'kales',
+    pages: 560,
+    rating: 8,
+    genres: [ 'fantasy' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae3'),
+    title: 'The Big Man',
+    author: 'yule',
+    pages: 540,
+    rating: 7,
+    genres: [ 'fantasy', 'magical' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae4'),
+    title: 'The great finder',
+    author: 'yule',
+    pages: 400,
+    rating: 3,
+    genres: [ 'sci-fi', 'dysopian' ]
+  }
+]
+
+# -> find({field:value})
+
+returns all the field with the value
+bookstore> db.books.find({author:"yule"})
+[
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae3'),
+    title: 'The Big Man',
+    author: 'yule',
+    pages: 540,
+    rating: 7,
+    genres: [ 'fantasy', 'magical' ]
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae4'),
+    title: 'The great finder',
+    author: 'yule',
+    pages: 400,
+    rating: 3,
+    genres: [ 'sci-fi', 'dysopian' ]
+  }
+]
+
+# -> find({},{field:1,field:1 ...fieldn:1})
+
+returns all the values with only the fileds specified
+
+bookstore> db.books.find({},{title:1,author:1,rating:1})
+[
+  {
+    _id: ObjectId('65cecf334586e30177dfe8c2'),
+    title: 'Name of the wind',
+    author: 'lemonr',
+    rating: 0
+  },
+  {
+    _id: ObjectId('65ced2cd2a5d7663eb058adf'),
+    title: 'The loss ship',
+    author: 'johny done',
+    rating: 6
+  },
+  {
+    _id: ObjectId('65ced3602a5d7663eb058ae0'),
+    title: 'holy ghost',
+    author: 'manlt john',
+    rating: 5
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae1'),
+    title: 'The rider',
+    author: ' john',
+    rating: 9
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae2'),
+    title: 'dansel',
+    author: 'kales',
+    rating: 8
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae3'),
+    title: 'The Big Man',
+    author: 'yule',
+    rating: 7
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae4'),
+    title: 'The great finder',
+    author: 'yule',
+    rating: 3
+  }
+]
+
+
+
