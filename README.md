@@ -276,8 +276,16 @@ all operators are denotedusing the $ sign
 # the gt (greater than) operator
 
 # -> $gt: value
+# -> $gte: value
+greater than or equal
 
  db.books2.find({rating:{$gt:3}})
+
+ # -> $lt:value
+ # -> $lte:value
+ less than or equal to value
+ db.books2.find({rating:{$lt:6}})
+
 
  returns allobjects with rating greater than 3
 
