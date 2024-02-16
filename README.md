@@ -137,4 +137,22 @@ bookstore> db.books.find({},{title:1,author:1,rating:1})
 ]
 
 
+# -> find({field:value,field:value},{field:1,field:1})
 
+returns all the fields (field:1) from the key value specified
+
+db.books.find({author:"yule"},{rating:1,pages:1,title:1})
+[
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae3'),
+    title: 'The Big Man',
+    pages: 540,
+    rating: 7
+  },
+  {
+    _id: ObjectId('65ced49c2a5d7663eb058ae4'),
+    title: 'The great finder',
+    pages: 400,
+    rating: 3
+  }
+]
