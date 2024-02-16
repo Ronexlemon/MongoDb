@@ -156,3 +156,18 @@ db.books.find({author:"yule"},{rating:1,pages:1,title:1})
     rating: 3
   }
 ]
+
+# -> findOne({field:value})
+
+returns a values which matches the key value pair
+
+bookstore> db.books.findOne({_id:ObjectId('65ced49c2a5d7663eb058ae4')})
+{
+  _id: ObjectId('65ced49c2a5d7663eb058ae4'),
+  title: 'The great finder',
+  author: 'yule',
+  pages: 400,
+  rating: 3,
+  genres: [ 'sci-fi', 'dysopian' ]
+}
+
