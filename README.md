@@ -394,6 +394,13 @@ returns all object that don't have the value
 db.books2.find({genres:{$all:["fantasy"]}})
  returns all object that have all the values in the array
 
+ # -> Nested array 
+
+ db.books2.find({"reviews.name":"john" })
+
+ accessing the nested objects , using the property name . the field in quotes
+
+
 
 
 
