@@ -401,6 +401,10 @@ db.books2.find({genres:{$all:["fantasy"]}})
  accessing the nested objects , using the property name . the field in quotes
 
 
+ # -> Deleting Documents
+ 
+
+
 
 
 

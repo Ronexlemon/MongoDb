@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "65cedfa92a5d7663eb058ae5"
+  },
+  "title": "the way of king",
+  "author": "Brandon sley",
+  "rating": 6,
+  "pages": 100,
+  "genres": [
+    "fantasy",
+    "magical"
+  ],
+  "reviews": [
+    {
+      "name": "yoshi",
+      "body": "great book"
+    },
+    {
+      "name": "mand",
+      "body": "i like the book"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65cee1132a5d7663eb058ae6"
+  },
+  "title": "the way of king",
+  "author": "Kinsley",
+  "rating": 3,
+  "pages": 100,
+  "genres": [
+    "fantasy",
+    "magical"
+  ],
+  "reviews": [
+    {
+      "name": "yoshi",
+      "body": "great book"
+    },
+    {
+      "name": "mand",
+      "body": "i like the book"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65cee1132a5d7663eb058ae7"
+  },
+  "title": "the little monkey",
+  "author": "Bran",
+  "rating": 7,
+  "pages": 100,
+  "genres": [
+    "fantasy"
+  ],
+  "reviews": [
+    {
+      "name": "john",
+      "body": "great book yeah"
+    },
+    {
+      "name": "feng",
+      "body": "the book its giving"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65cee1132a5d7663eb058ae8"
+  },
+  "title": "the jungle",
+  "author": "slake",
+  "rating": 2,
+  "pages": 100,
+  "genres": [
+    "fantasy",
+    "magical"
+  ],
+  "reviews": [
+    {
+      "name": "yoshi",
+      "body": "great book"
+    },
+    {
+      "name": "mand",
+      "body": "i like the book"
+    }
+  ]
+}]
