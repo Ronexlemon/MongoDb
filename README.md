@@ -375,6 +375,19 @@ not in
 db.books.find({rating:{$nin:[2,5,7]}})
 
 
+# -> Querying the array
+
+query the array to check for a specific field
+
+db.books2.find({genres: ["fantasy"]})
+
+returns all the array with only the  value
+
+db.books2.find({genres: "fantasy"})
+
+returns all the array that contains the value
+
+
 
 
 
