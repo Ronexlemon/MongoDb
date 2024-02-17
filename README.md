@@ -409,6 +409,13 @@ db.books2.find({genres:{$all:["fantasy"]}})
  Delete many where by a  key value is ...
  db.books2.deleteMany({author:"Bran"})
 
+# -> Update by Id and $set new values
+db.books2.updateOne({ _id: ObjectId('65cee1132a5d7663eb058ae8')},{$set:{rating:9,genres:["sci-fi","fantasy"],pages:500}})
+
+
+
+
+
 
 
 
