@@ -413,6 +413,13 @@ db.books2.find({genres:{$all:["fantasy"]}})
 db.books2.updateOne({ _id: ObjectId('65cee1132a5d7663eb058ae8')},{$set:{rating:9,genres:["sci-fi","fantasy"],pages:500}})
 
 
+# -> increment operator   $inc
+
+db.books2.updateOne({_id: ObjectId('65cee1132a5d7663eb058ae8')},{$inc:{pages:10}})
+
+the $inc operator increment a field by the given values
+
+
 
 
 
