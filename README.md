@@ -387,6 +387,13 @@ db.books2.find({genres: "fantasy"})
 
 returns all the array that contains the value
 
+db.books2.find({genres: {$nin:["magical"]}})
+
+returns all object that don't have the value
+
+db.books2.find({genres:{$all:["fantasy"]}})
+ returns all object that have all the values in the array
+
 
 
 
