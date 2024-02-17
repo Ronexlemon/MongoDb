@@ -406,6 +406,10 @@ db.books2.find({genres:{$all:["fantasy"]}})
  remove document by id 
  db.books2.deleteOne({_id: ObjectId('65cee1132a5d7663eb058ae8')})
 
+ Delete many where by a  key value is ...
+ db.books2.deleteMany({author:"Bran"})
+
+
 
 
 
