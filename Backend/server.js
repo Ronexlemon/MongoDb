@@ -1,19 +1,17 @@
-const express = require("express")
+const express = require("express");
 //init app middleware
-const Cors = require("cors")
+const cors = require("cors");
 
-const books = require("../Backend/routes/Books/route")
+const books = require("../Backend/routes/Books/route");
 
-const App = express();
+const app = express(); // Initialize Express app
 
-App.use(Cors)
-
-
-
-App.listen(3000,()=>{
-    console.log(`App listening on port ${3000}`)
-})
+app.use(cors()); // Use cors middleware
 
 //routes
-App.use("/books",books)
+app.use("/books", books);
 
+
+app.listen(3000, () => {
+    console.log(`App listening on port ${3000}`);
+});
