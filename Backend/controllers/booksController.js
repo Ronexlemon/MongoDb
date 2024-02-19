@@ -22,6 +22,28 @@ const AllBooks =asyncHandler(async(req,res)=>{
 
 
 })
+const getBooksByPagination =asyncHandler(async(req,res)=>{
+    const page = req.query.p || 0;
+    const bookPerPage =2;
+    const db = getDb();
+   
+
+    let books =[]
+    const data =  db.collection("books2").find()
+    .sort({author:1})
+    .skip(page*bookPerPage)
+    .limit(bookPerPage)
+    .forEach(book => books.push(book))
+    .then(()=>{
+      res.status(200).json(books)
+    })
+    .catch(()=>{
+      res.status(500).json({error: "Could not fetch the documents"})
+    });
+    
+
+
+})
 
 const getBookByAuthor = asyncHandler(async(req,res)=>{
     const { name,id } = req.body;
@@ -119,5 +141,6 @@ module.exports ={
     getBooksFromSameGenres,
     getBooksContainsOnlySameGenres,
     getBooksReviewsPerIndividual,
-    updateBookById
+    updateBookById,
+    getBooksByPagination
 }
