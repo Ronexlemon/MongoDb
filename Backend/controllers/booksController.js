@@ -77,9 +77,28 @@ const getBooksContainsOnlySameGenres = asyncHandler(async(req,res)=>{
 
 })
 
+const getBooksReviewsPerIndividual = asyncHandler(async(req,res)=>{
+    const { name } = req.body;
+   
+//nested array
+    const db = getDb()
+    let books =[]
+    const data =  db.collection("books2").find({"reviews.name": name})
+        .forEach(book => books.push(book))
+    .then(()=>{
+      res.status(200).json(books)
+    })
+    .catch(()=>{
+      res.status(500).json({error: "Could not fetch the documents"})
+    });
+
+
+})
+
 module.exports ={
     AllBooks,
     getBookByAuthor,
     getBooksFromSameGenres,
-    getBooksContainsOnlySameGenres
+    getBooksContainsOnlySameGenres,
+    getBooksReviewsPerIndividual
 }
