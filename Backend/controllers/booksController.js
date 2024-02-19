@@ -94,11 +94,30 @@ const getBooksReviewsPerIndividual = asyncHandler(async(req,res)=>{
 
 
 })
+const updateBookById = asyncHandler(async(req,res)=>{
+    const { id } = req.body;
+   
+
+    const db = getDb()
+    try{
+
+        db.collection("books2").updateOne({_id:id},{$set:{rating:10}})
+        res.json({message: "Successful update rating"})
+    }catch(err){
+        res.status(401).json({message:"failed to update"})
+
+    }
+     
+        
+
+
+})
 
 module.exports ={
     AllBooks,
     getBookByAuthor,
     getBooksFromSameGenres,
     getBooksContainsOnlySameGenres,
-    getBooksReviewsPerIndividual
+    getBooksReviewsPerIndividual,
+    updateBookById
 }
